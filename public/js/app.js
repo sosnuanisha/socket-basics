@@ -11,6 +11,7 @@
 			   
 			   console.log('New Message !');
 			   console.log(message.text);
+			   jQuery('.messages').append('<p>'+message.text + '</p>');
 			   
 		   });
 		   
