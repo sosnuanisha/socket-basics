@@ -1,0 +1,19 @@
+{
+  "name": "sockets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "sockets-basi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sosnuanisha/socket-basics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sosnuanisha/socket-basics/issues"
+  },
+  "homepage": "https://github.com/sosnuanisha/socket-basics#readme"
+}
