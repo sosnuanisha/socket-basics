@@ -7,7 +7,7 @@
                     for (var i = 0; i < vars.length; i++) {
                        var pair = vars[i].split('=');
                        if (decodeURIComponent(pair[0]) == variable) {
-                       return decodeURIComponent(pair[1]);
+                       return decodeURIComponent(pair[1].replace(/\+/g, ' '));
                         }
                       }
     
@@ -16,12 +16,19 @@
 		   	   
 		   var name=getQueryVariable('name') || 'Annonymous';
 		   var room=getQueryVariable('room');
+               
+               
+               jQuery('.room-title').text(room);
 		   
 		   console.log(name +' wants to join the '+ room);
 		   
 		   socket.on('connect',function(){
 			   
 			   console.log('Connected to socket.io socket !');
+                     socket.emit('joinRoom',{
+                           name:name,
+                           room:room
+                     });
 		   });
 		   
 		   
